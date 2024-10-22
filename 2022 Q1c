@@ -1,0 +1,20 @@
+import string
+d=2
+t=0
+a= string.ascii_uppercase
+letters=list(a)
+word =list(("OLYMPIAD"))
+l=int(len(word))
+while d==2:
+  for i in range(len(word)-1,0,-1):
+    l1=int(letters.index(word[i]))
+    l2=int(letters.index(word[i-1]))
+    new= l1-l2
+    if l1<l2: 
+      new=new+26
+    newL=letters[new-1]
+    word[i]= newL
+  t=t+1
+  if ("".join(word))=="OLYMPIAD":
+     d=1
+print(t)
