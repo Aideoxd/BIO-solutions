@@ -1,0 +1,14 @@
+import string
+a= string.ascii_uppercase
+letters=list(a)
+word =list(input("Enter encrypted word:"))
+l=int(len(word))
+for i in range(len(word)-1,0,-1):
+    l1=int(letters.index(word[i]))
+    l2=int(letters.index(word[i-1]))
+    new= l1-l2
+    if l1<l2: 
+      new=new+26
+    newL=letters[new-1]
+    word[i]= newL
+print("".join(word))
