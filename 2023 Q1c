@@ -1,0 +1,21 @@
+ans=[]
+count=0
+c=0
+fibo=[1,2]
+while (fibo[c+1])<=53316291173:
+    fibo.append(fibo[c]+fibo[c+1])
+    last=fibo[c+2]
+    c+=1
+for j in range(2,53316291173):
+  num=j  
+  left=num
+  while left!=0:
+    for i in range(1,len(fibo)):
+        if fibo[i]>left:
+            ans.append(fibo[i-1])
+            left=left-fibo[i-1]
+            break
+    if len(ans)==3:
+        count+=1
+    
+print(count)          
